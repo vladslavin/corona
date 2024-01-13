@@ -1,0 +1,25 @@
+.vertical-space {
+    margin: 1rem 0.2rem;
+}
+.ant-layout-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--msd-ant-layout-header-bg) !important;
+    box-shadow: var(--msd-ant-colors-light-black) 0 0.1rem 0.3rem;
+}
+
+.ant-layout-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0 !important;
+
+    & > a {
+        font-size: 1.5rem;
+    }
+}
+
+.ant-layout-content {
+    padding: 1rem 2rem;
+    min-height: calc(100vh - 8rem) !important;
+}
