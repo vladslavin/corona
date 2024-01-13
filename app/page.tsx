@@ -1,95 +1,43 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { FC } from 'react';
+import { Breadcrumb, Col, ConfigProvider, Layout, Row } from 'antd';
+import { Content } from 'antd/es/layout/layout';
+import { MDSTheme } from './theme/ThemeConfig';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { LineChart } from './components/LineChart';
+import { PieChart } from './components/PieChart';
+import { Actions } from './components/Actions';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+const Home: FC = () => {
+    console.log('Greeting', process.env.GREETING);
+    return (
+        <ConfigProvider theme={MDSTheme}>
+            <AntdRegistry>
+                <Layout>
+                    <Header title="App Title" />
+                    <Content>
+                        <Col xs={{ span: 24 }} md={{ offset: 1, span: 22 }}>
+                            <Row justify="space-between" align="middle" className="vertical-space">
+                                <Breadcrumb items={[{ title: 'Page Title' }]} />
+                                <Actions />
+                            </Row>
+                        </Col>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                        <Row gutter={[24, 24]}>
+                            <Col xs={{ span: 24 }} md={{ offset: 1, span: 11 }}>
+                                <LineChart />
+                            </Col>
+                            <Col xs={{ span: 24 }} md={{ span: 11 }}>
+                                <PieChart />
+                            </Col>
+                        </Row>
+                    </Content>
+                    <Footer />
+                </Layout>
+            </AntdRegistry>
+        </ConfigProvider>
+    );
+};
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home;
