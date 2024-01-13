@@ -2,7 +2,6 @@ import { Footer as AppFooter } from 'antd/es/layout/layout';
 import Link from 'antd/es/typography/Link';
 import { GithubOutlined } from '@ant-design/icons';
 import { FC } from 'react';
-import { Space } from 'antd';
 
 export const Footer: FC = () => (
     <AppFooter>
