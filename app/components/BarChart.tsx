@@ -31,6 +31,7 @@ export const BarChart = () => {
         yField: 'TotalCases',
         grouped: true,
         colorField: 'Country',
+        className: 'barChart',
     };
 
     return (

@@ -35,6 +35,7 @@ export const PieChart = () => {
         innerRadius: 0.5,
         radius: 0.75,
         interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
+        className: 'pieChart',
     };
 
     return (
