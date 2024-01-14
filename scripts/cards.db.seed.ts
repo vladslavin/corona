@@ -23,14 +23,16 @@ async function main() {
 
         await cards.insertMany([
             {
-                name: 'LineChart',
+                name: 'BarChart',
                 description: 'Probably the best card ever',
+                isLiked: false,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },
             {
                 name: 'PieChart',
                 description: 'Perhaps the best card ever',
+                isLiked: false,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },
