@@ -1,7 +1,7 @@
 import { CardActions } from './CardActions';
 import { FC } from 'react';
 import { CardName } from '@/lib/UtilityTypes';
-import { useCards } from './useCards';
+import { useCards } from '@/lib/hooks/useCards';
 
 interface Props {
     cardName: CardName;
