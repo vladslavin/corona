@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { FCC } from '../lib/Types';
+import type { FCC } from '@/lib/UtilityTypes';
 import './globals.css';
 import './theme/msd.theme.css';
 
