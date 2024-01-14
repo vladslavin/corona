@@ -4,7 +4,7 @@ import { Card } from 'antd';
 import dynamic from 'next/dynamic';
 import { CardActionsContainer as CardActions } from './CardActionsContainer';
 import { Loading } from './Loading';
-import { useNewCovidCases } from './useNewCovidCases';
+import { useNewCovidCases } from '@/lib/hooks/useNewCovidCases';
 
 const Bar = dynamic(() => import('@ant-design/charts').then((chart) => chart.Column), {
     ssr: false,

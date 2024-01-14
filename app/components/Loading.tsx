@@ -3,6 +3,6 @@ import { LoadingOutlined } from '@ant-design/icons';
 
 export const Loading = () => (
     <Row justify="center" align="middle" className="vertical-space">
-        <LoadingOutlined />
+        <LoadingOutlined className="loading-icon" />
     </Row>
 );

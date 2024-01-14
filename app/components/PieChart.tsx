@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { Loading } from './Loading';
 import { Card } from 'antd';
 import { CardActionsContainer as CardAction } from './CardActionsContainer';
-import { useTotalCovidCases } from './useTotalCovidCases';
+import { useTotalCovidCases } from '@/lib/hooks/useTotalCovidCases';
 
 const Pie = dynamic(() => import('@ant-design/charts').then((chart) => chart.Pie), {
     ssr: false,
