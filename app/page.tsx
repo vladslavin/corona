@@ -5,28 +5,27 @@ import { MDSTheme } from './theme/ThemeConfig';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { LineChart } from './components/LineChart';
+import { BarChart } from './components/BarChart';
 import { PieChart } from './components/PieChart';
 import { Actions } from './components/Actions';
 
 const Home: FC = () => {
-    console.log('Greeting', process.env.GREETING);
     return (
         <ConfigProvider theme={MDSTheme}>
             <AntdRegistry>
                 <Layout>
-                    <Header title="App Title" />
+                    <Header title="MSD Covid Dashboard" />
                     <Content>
                         <Col xs={{ span: 24 }} md={{ offset: 1, span: 22 }}>
                             <Row justify="space-between" align="middle" className="vertical-space">
-                                <Breadcrumb items={[{ title: 'Page Title' }]} />
+                                <Breadcrumb items={[{ title: 'UK Statistics' }]} />
                                 <Actions />
                             </Row>
                         </Col>
 
                         <Row gutter={[24, 24]}>
                             <Col xs={{ span: 24 }} md={{ offset: 1, span: 11 }}>
-                                <LineChart />
+                                <BarChart />
                             </Col>
                             <Col xs={{ span: 24 }} md={{ span: 11 }}>
                                 <PieChart />
