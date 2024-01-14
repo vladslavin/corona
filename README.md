@@ -5,6 +5,8 @@ Typescript/JS
 NextJS 14
 Covid 19 data was consumed from public available API from the Open Data initiative in the UK.
 
+![CoronaMSD](https://github.com/vladslavin/corona/assets/185887/3f811247-1857-42e5-bc63-749711c3ee3a)
+
 Project was bootstrapped with  [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ### Getting Started Locally
