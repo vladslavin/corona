@@ -1,6 +1,10 @@
 .vertical-space {
     margin: 1rem 0.2rem;
 }
+.horizontal-space {
+    margin: 0 1rem;
+}
+
 .ant-layout-header {
     display: flex;
     align-items: center;
@@ -21,5 +25,5 @@
 
 .ant-layout-content {
     padding: 1rem 2rem;
-    min-height: calc(100vh - 8rem) !important;
+    min-height: calc(100svh - 8rem) !important;
 }
